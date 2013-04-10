@@ -13,7 +13,7 @@
 // --------------------------------------------------------------
 // IMPORTS
 
-var io = require('socket.io');
+var io = require('socket.io').listen(5060);
 var twitter = require('ntwitter');
 
 
@@ -33,9 +33,6 @@ var twitterApiHandler = new twitter(
 // --------------------------------------------------------------
 // START SOCKET.IO
 
-// Start listening on port 5060
-io.listen(5060);
-
 // On socket.io connection
 io.sockets.on('connection', function (socket)
 {
@@ -45,25 +42,9 @@ io.sockets.on('connection', function (socket)
 	// On request message, handle request
 	socket.on('req', function (data)
 	{
-		handleRequest(socket, data);			
+		searchTwitterStream(socket, [data.msg]);
 	});
 });
-
-
-// --------------------------------------------------------------
-// HANDLE REQUEST
-
-function handleRequest(socket, data)
-{
-	// Search terms collection
-	var searchTerms = [];
-
-	// Add data to search terms
-	searchTerms.push(data.msg);
-
-	// Search twitter stream with the given search terms
-	searchTwitterStream(socket, searchTerms);
-}
 
 
 // --------------------------------------------------------------

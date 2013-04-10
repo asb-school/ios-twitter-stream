@@ -25,20 +25,23 @@ var socket = io.connect('localhost', { port: 5060 });
 // --------------------------------------------------------------
 // COMMAND LINE ARGUMENTS
 
+// Split values by comman
+function terms(value) 
+{
+	return value.split(',');
+}
+
 commander.version('0.1');
 commander.usage('[option] value');
-commander.option('-t --terms [terms]', 'Twitter search terms');
+commander.option('-t --terms <terms>', 'Twitter search terms separated by commas', terms);
 commander.parse(process.argv);
 
-// For each search term
-for (term in commander.terms)
-{
 
-}
+// --------------------------------------------------------------
+// ON CONNECTION
 
 socket.on('connect', function ()
 {
-	// do stuff
+	// Send a request to search for given terms
+	socket.emit('req', { commander.terms });
 });
-
-socket.emit()

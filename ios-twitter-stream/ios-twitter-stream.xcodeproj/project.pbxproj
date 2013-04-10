@@ -19,6 +19,15 @@
 		46FF840E1715ED8900FCA9ED /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FF840C1715ED8900FCA9ED /* MainStoryboard_iPhone.storyboard */; };
 		46FF84111715ED8900FCA9ED /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FF840F1715ED8900FCA9ED /* MainStoryboard_iPad.storyboard */; };
 		46FF84141715ED8900FCA9ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF84131715ED8900FCA9ED /* ViewController.m */; };
+		46FF84261715EE2700FCA9ED /* SocketIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF841C1715EE2700FCA9ED /* SocketIO.m */; };
+		46FF84271715EE2700FCA9ED /* SocketIOJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF841E1715EE2700FCA9ED /* SocketIOJSONSerialization.m */; };
+		46FF84281715EE2700FCA9ED /* SocketIOPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF84201715EE2700FCA9ED /* SocketIOPacket.m */; };
+		46FF84291715EE2700FCA9ED /* SocketIOTransportWebsocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF84231715EE2700FCA9ED /* SocketIOTransportWebsocket.m */; };
+		46FF842A1715EE2700FCA9ED /* SocketIOTransportXHR.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF84251715EE2700FCA9ED /* SocketIOTransportXHR.m */; };
+		46FF84331715EE3900FCA9ED /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 46FF842C1715EE3900FCA9ED /* base64.c */; };
+		46FF84341715EE3900FCA9ED /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF842F1715EE3900FCA9ED /* NSData+SRB64Additions.m */; };
+		46FF84351715EE3900FCA9ED /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF84321715EE3900FCA9ED /* SRWebSocket.m */; };
+		46FF84381715EE5B00FCA9ED /* SocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF84371715EE5B00FCA9ED /* SocketController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +48,26 @@
 		46FF84101715ED8900FCA9ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		46FF84121715ED8900FCA9ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		46FF84131715ED8900FCA9ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46FF841B1715EE2700FCA9ED /* SocketIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIO.h; sourceTree = "<group>"; };
+		46FF841C1715EE2700FCA9ED /* SocketIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIO.m; sourceTree = "<group>"; };
+		46FF841D1715EE2700FCA9ED /* SocketIOJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOJSONSerialization.h; sourceTree = "<group>"; };
+		46FF841E1715EE2700FCA9ED /* SocketIOJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOJSONSerialization.m; sourceTree = "<group>"; };
+		46FF841F1715EE2700FCA9ED /* SocketIOPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOPacket.h; sourceTree = "<group>"; };
+		46FF84201715EE2700FCA9ED /* SocketIOPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOPacket.m; sourceTree = "<group>"; };
+		46FF84211715EE2700FCA9ED /* SocketIOTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransport.h; sourceTree = "<group>"; };
+		46FF84221715EE2700FCA9ED /* SocketIOTransportWebsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportWebsocket.h; sourceTree = "<group>"; };
+		46FF84231715EE2700FCA9ED /* SocketIOTransportWebsocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportWebsocket.m; sourceTree = "<group>"; };
+		46FF84241715EE2700FCA9ED /* SocketIOTransportXHR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportXHR.h; sourceTree = "<group>"; };
+		46FF84251715EE2700FCA9ED /* SocketIOTransportXHR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportXHR.m; sourceTree = "<group>"; };
+		46FF842C1715EE3900FCA9ED /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		46FF842D1715EE3900FCA9ED /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		46FF842E1715EE3900FCA9ED /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		46FF842F1715EE3900FCA9ED /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		46FF84301715EE3900FCA9ED /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		46FF84311715EE3900FCA9ED /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		46FF84321715EE3900FCA9ED /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		46FF84361715EE5B00FCA9ED /* SocketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketController.h; sourceTree = "<group>"; };
+		46FF84371715EE5B00FCA9ED /* SocketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,8 @@
 		46FF83E51715ED8900FCA9ED = {
 			isa = PBXGroup;
 			children = (
+				46FF842B1715EE3900FCA9ED /* SocketRocket */,
+				46FF841A1715EE2700FCA9ED /* SocketIO */,
 				46FF83FA1715ED8900FCA9ED /* ios-twitter-stream */,
 				46FF83F31715ED8900FCA9ED /* Frameworks */,
 				46FF83F11715ED8900FCA9ED /* Products */,
@@ -85,6 +116,8 @@
 		46FF83FA1715ED8900FCA9ED /* ios-twitter-stream */ = {
 			isa = PBXGroup;
 			children = (
+				46FF84361715EE5B00FCA9ED /* SocketController.h */,
+				46FF84371715EE5B00FCA9ED /* SocketController.m */,
 				46FF84031715ED8900FCA9ED /* AppDelegate.h */,
 				46FF84041715ED8900FCA9ED /* AppDelegate.m */,
 				46FF840C1715ED8900FCA9ED /* MainStoryboard_iPhone.storyboard */,
@@ -108,6 +141,38 @@
 				46FF840A1715ED8900FCA9ED /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46FF841A1715EE2700FCA9ED /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				46FF841B1715EE2700FCA9ED /* SocketIO.h */,
+				46FF841C1715EE2700FCA9ED /* SocketIO.m */,
+				46FF841D1715EE2700FCA9ED /* SocketIOJSONSerialization.h */,
+				46FF841E1715EE2700FCA9ED /* SocketIOJSONSerialization.m */,
+				46FF841F1715EE2700FCA9ED /* SocketIOPacket.h */,
+				46FF84201715EE2700FCA9ED /* SocketIOPacket.m */,
+				46FF84211715EE2700FCA9ED /* SocketIOTransport.h */,
+				46FF84221715EE2700FCA9ED /* SocketIOTransportWebsocket.h */,
+				46FF84231715EE2700FCA9ED /* SocketIOTransportWebsocket.m */,
+				46FF84241715EE2700FCA9ED /* SocketIOTransportXHR.h */,
+				46FF84251715EE2700FCA9ED /* SocketIOTransportXHR.m */,
+			);
+			path = SocketIO;
+			sourceTree = "<group>";
+		};
+		46FF842B1715EE3900FCA9ED /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				46FF842C1715EE3900FCA9ED /* base64.c */,
+				46FF842D1715EE3900FCA9ED /* base64.h */,
+				46FF842E1715EE3900FCA9ED /* NSData+SRB64Additions.h */,
+				46FF842F1715EE3900FCA9ED /* NSData+SRB64Additions.m */,
+				46FF84301715EE3900FCA9ED /* SocketRocket-Prefix.pch */,
+				46FF84311715EE3900FCA9ED /* SRWebSocket.h */,
+				46FF84321715EE3900FCA9ED /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +245,15 @@
 				46FF84011715ED8900FCA9ED /* main.m in Sources */,
 				46FF84051715ED8900FCA9ED /* AppDelegate.m in Sources */,
 				46FF84141715ED8900FCA9ED /* ViewController.m in Sources */,
+				46FF84261715EE2700FCA9ED /* SocketIO.m in Sources */,
+				46FF84271715EE2700FCA9ED /* SocketIOJSONSerialization.m in Sources */,
+				46FF84281715EE2700FCA9ED /* SocketIOPacket.m in Sources */,
+				46FF84291715EE2700FCA9ED /* SocketIOTransportWebsocket.m in Sources */,
+				46FF842A1715EE2700FCA9ED /* SocketIOTransportXHR.m in Sources */,
+				46FF84331715EE3900FCA9ED /* base64.c in Sources */,
+				46FF84341715EE3900FCA9ED /* NSData+SRB64Additions.m in Sources */,
+				46FF84351715EE3900FCA9ED /* SRWebSocket.m in Sources */,
+				46FF84381715EE5B00FCA9ED /* SocketController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

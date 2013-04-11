@@ -44,7 +44,7 @@ io.sockets.on('connection', function (socket)
 	// On request message, handle request
 	socket.on('req', function (data)
 	{
-		searchTwitterStream(socket, [data.terms]);
+		searchTwitterStream(socket, data.terms);
 	});
 
 	socket.on('disconnect', function (socket)

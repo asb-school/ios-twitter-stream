@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46E2D8791717298100B54082 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2D8781717298100B54082 /* libicucore.dylib */; };
+		46E2D87C1717298900B54082 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2D87B1717298900B54082 /* Security.framework */; };
+		46E2D87E1717298E00B54082 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E2D87D1717298E00B54082 /* CFNetwork.framework */; };
+		46E2D8901717387300B54082 /* searchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E2D88F1717387200B54082 /* searchViewController.m */; };
+		46E2D893171739C400B54082 /* displayTweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E2D892171739C400B54082 /* displayTweetsViewController.m */; };
 		46FF83F51715ED8900FCA9ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF83F41715ED8900FCA9ED /* UIKit.framework */; };
 		46FF83F71715ED8900FCA9ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF83F61715ED8900FCA9ED /* Foundation.framework */; };
 		46FF83F91715ED8900FCA9ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FF83F81715ED8900FCA9ED /* CoreGraphics.framework */; };
@@ -31,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46E2D8781717298100B54082 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		46E2D87B1717298900B54082 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		46E2D87D1717298E00B54082 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		46E2D88E1717387200B54082 /* searchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchViewController.h; sourceTree = "<group>"; };
+		46E2D88F1717387200B54082 /* searchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchViewController.m; sourceTree = "<group>"; };
+		46E2D891171739C400B54082 /* displayTweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = displayTweetsViewController.h; sourceTree = "<group>"; };
+		46E2D892171739C400B54082 /* displayTweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = displayTweetsViewController.m; sourceTree = "<group>"; };
 		46FF83F01715ED8900FCA9ED /* ios-twitter-stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-twitter-stream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FF83F41715ED8900FCA9ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		46FF83F61715ED8900FCA9ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E2D87E1717298E00B54082 /* CFNetwork.framework in Frameworks */,
+				46E2D87C1717298900B54082 /* Security.framework in Frameworks */,
+				46E2D8791717298100B54082 /* libicucore.dylib in Frameworks */,
 				46FF83F51715ED8900FCA9ED /* UIKit.framework in Frameworks */,
 				46FF83F71715ED8900FCA9ED /* Foundation.framework in Frameworks */,
 				46FF83F91715ED8900FCA9ED /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +102,9 @@
 		46FF83E51715ED8900FCA9ED = {
 			isa = PBXGroup;
 			children = (
+				46E2D87D1717298E00B54082 /* CFNetwork.framework */,
+				46E2D87B1717298900B54082 /* Security.framework */,
+				46E2D8781717298100B54082 /* libicucore.dylib */,
 				46FF842B1715EE3900FCA9ED /* SocketRocket */,
 				46FF841A1715EE2700FCA9ED /* SocketIO */,
 				46FF83FA1715ED8900FCA9ED /* ios-twitter-stream */,
@@ -116,12 +134,16 @@
 		46FF83FA1715ED8900FCA9ED /* ios-twitter-stream */ = {
 			isa = PBXGroup;
 			children = (
+				46E2D88E1717387200B54082 /* searchViewController.h */,
+				46E2D88F1717387200B54082 /* searchViewController.m */,
 				46FF84361715EE5B00FCA9ED /* SocketController.h */,
 				46FF84371715EE5B00FCA9ED /* SocketController.m */,
 				46FF84031715ED8900FCA9ED /* AppDelegate.h */,
 				46FF84041715ED8900FCA9ED /* AppDelegate.m */,
 				46FF840C1715ED8900FCA9ED /* MainStoryboard_iPhone.storyboard */,
 				46FF840F1715ED8900FCA9ED /* MainStoryboard_iPad.storyboard */,
+				46E2D891171739C400B54082 /* displayTweetsViewController.h */,
+				46E2D892171739C400B54082 /* displayTweetsViewController.m */,
 				46FF84121715ED8900FCA9ED /* ViewController.h */,
 				46FF84131715ED8900FCA9ED /* ViewController.m */,
 				46FF83FB1715ED8900FCA9ED /* Supporting Files */,
@@ -254,6 +276,8 @@
 				46FF84341715EE3900FCA9ED /* NSData+SRB64Additions.m in Sources */,
 				46FF84351715EE3900FCA9ED /* SRWebSocket.m in Sources */,
 				46FF84381715EE5B00FCA9ED /* SocketController.m in Sources */,
+				46E2D8901717387300B54082 /* searchViewController.m in Sources */,
+				46E2D893171739C400B54082 /* displayTweetsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +404,7 @@
 				46FF84191715ED8900FCA9ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

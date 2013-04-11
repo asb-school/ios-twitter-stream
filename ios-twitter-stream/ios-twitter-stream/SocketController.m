@@ -20,7 +20,7 @@
     socketIOHandler = [[SocketIO alloc] initWithDelegate:self];
     
     // Create connection to server
-    [socketIOHandler connectToHost:@"localhost" onPort:5050];
+    [socketIOHandler connectToHost:@"nodeavn.com" onPort:5060];
 }
 
 

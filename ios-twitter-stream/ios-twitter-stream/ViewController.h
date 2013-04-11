@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocketController.h"
 
 @interface ViewController : UIViewController
+{
+    SocketController *socketController;
+  
+}
+
+
 
 @end

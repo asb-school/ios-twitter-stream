@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface displayTweetsViewController : UIViewController
+{
+    
+}
+
+@property (nonatomic) NSArray *tableData;
 
 @end

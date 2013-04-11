@@ -102,9 +102,6 @@
 		46FF83E51715ED8900FCA9ED = {
 			isa = PBXGroup;
 			children = (
-				46E2D87D1717298E00B54082 /* CFNetwork.framework */,
-				46E2D87B1717298900B54082 /* Security.framework */,
-				46E2D8781717298100B54082 /* libicucore.dylib */,
 				46FF842B1715EE3900FCA9ED /* SocketRocket */,
 				46FF841A1715EE2700FCA9ED /* SocketIO */,
 				46FF83FA1715ED8900FCA9ED /* ios-twitter-stream */,
@@ -124,6 +121,9 @@
 		46FF83F31715ED8900FCA9ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46E2D87D1717298E00B54082 /* CFNetwork.framework */,
+				46E2D87B1717298900B54082 /* Security.framework */,
+				46E2D8781717298100B54082 /* libicucore.dylib */,
 				46FF83F41715ED8900FCA9ED /* UIKit.framework */,
 				46FF83F61715ED8900FCA9ED /* Foundation.framework */,
 				46FF83F81715ED8900FCA9ED /* CoreGraphics.framework */,

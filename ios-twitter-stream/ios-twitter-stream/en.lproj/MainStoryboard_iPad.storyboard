@@ -96,7 +96,7 @@
                                 </state>
                                 <connections>
                                     <action selector="displayTweetsView:" destination="2" eventType="touchUpInside" id="Yl1-bI-tG4"/>
-                                    <segue destination="9N3-sm-3CT" kind="push" id="Rn3-Uy-AHY"/>
+                                    <segue destination="9N3-sm-3CT" kind="push" identifier="searchToDisplaySeg" id="Rn3-Uy-AHY"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vh4-h8-rFB">
@@ -156,23 +156,6 @@
             <point key="canvasLocation" x="-1915" y="-1481"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="displayTweetsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/displayTweetsViewController.h"/>
-        </class>
-        <class className="searchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/searchViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addSearchTerm:"/>
-                <relationship kind="action" name="displayTweetsView:"/>
-                <relationship kind="outlet" name="searchTermField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="searchTermsTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

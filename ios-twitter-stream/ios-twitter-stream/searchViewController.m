@@ -19,6 +19,7 @@
     return [tableData count];
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
@@ -43,6 +44,19 @@
         [tableData removeObjectAtIndex:indexPath.row];
 
         [searchTermsTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation: UITableViewRowAnimationFade];
+    }
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // If we are going to the display tweets view
+    if([segue.identifier isEqualToString:@"searchToDisplaySeg"])
+    {
+        displayTweetsViewController *controller = (displayTweetsViewController *)segue.destinationViewController;
+
+        // Copy table data to the display tweets view controller
+        controller.tableData = tableData;
     }
 }
 
@@ -78,11 +92,20 @@
     // Add another item to the table
     [tableData addObject:searchTermField.text];
     
-    // Reload table view
+    // Reload table data
     [searchTermsTable reloadData];
     
+    // Create an index path
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[tableData count]-1 inSection:0];
+
+    // Insert row in table view
+    [searchTermsTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation: UITableViewRowAnimationFade];
+
+    // Clear text field
+    searchTermField.text = @"";
+    
     // Scroll to bottom if we have a lot of items
-    if (tableData.count > 4)
+    if (tableData.count > 1)
     {
         [searchTermsTable scrollToRowAtIndexPath: [NSIndexPath indexPathForRow:[tableData count]-1 inSection:0] atScrollPosition: UITableViewScrollPositionTop animated: YES];
     }

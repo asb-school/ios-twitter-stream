@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSLog(@"%@", _tableData);
 }
 
 - (void)didReceiveMemoryWarning

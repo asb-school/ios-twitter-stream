@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "displayTweetsViewController.h"
 
 @interface searchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
@@ -15,6 +16,7 @@
     
     NSMutableArray *tableData;
 }
+
 - (IBAction)addSearchTerm:(id)sender;
 - (IBAction)displayTweetsView:(id)sender;
 

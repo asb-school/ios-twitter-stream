@@ -43,5 +43,10 @@ commander.parse(process.argv);
 socket.on('connect', function ()
 {
 	// Send a request to search for given terms
-	socket.emit('req', { commander.terms });
+	socket.emit('req', { terms: commander.terms });
+
+	socket.on('tweets', function(data)
+	{
+		console.log(data.msg);
+	});
 });

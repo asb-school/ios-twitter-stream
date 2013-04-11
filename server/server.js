@@ -15,6 +15,8 @@
 
 var io = require('socket.io').listen(5060);
 var twitter = require('ntwitter');
+var EventEmitter = require('events').EventEmitter;
+var server = new EventEmitter();
 
 
 // --------------------------------------------------------------
@@ -42,7 +44,12 @@ io.sockets.on('connection', function (socket)
 	// On request message, handle request
 	socket.on('req', function (data)
 	{
-		searchTwitterStream(socket, [data.msg]);
+		searchTwitterStream(socket, [data.terms]);
+	});
+
+	socket.on('disconnect', function (socket)
+	{
+		server.emit('client-disconnect');
 	});
 });
 
@@ -52,19 +59,26 @@ io.sockets.on('connection', function (socket)
 
 function searchTwitterStream(socket, searchTerms)
 {
+	// Twitter API Search Stream
 	twitterApiHandler.stream('statuses/filter',
-	{ 
+	{
+		// Filter with given search terms
 		track: searchTerms
 	},
 
 	function(stream)
 	{
+		// When we get data, send it to the client
 	    stream.on('data', function(tweet) 
 	    {
-			console.log(tweet.text);
-
 			// Send tweet back to client
 			socket.emit('tweets', { msg: tweet.text });
+	    });
+
+	    // On client disconnect, destroy the stream
+	    server.on('client-disconnect', function()
+	    {
+	    	stream.destroy;
 	    });
 	});
 }

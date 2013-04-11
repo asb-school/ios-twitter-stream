@@ -19,7 +19,6 @@
     return [tableData count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
@@ -35,6 +34,17 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // If row is deleted, remove it from the list.
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+//        SimpleEditableListAppDelegate *controller = (SimpleEditableListAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [tableData removeObjectAtIndex:indexPath.row];
+//        [tableData removeObjectFromListAtIndex:indexPath.row];
+        [searchTermsTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -53,6 +63,8 @@
     
     // Init table array
     tableData = [NSMutableArray new];
+    
+    [searchTermsTable setEditing:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

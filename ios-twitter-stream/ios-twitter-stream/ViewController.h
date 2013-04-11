@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SocketController.h"
+#import "displayTweetsViewController.h"
 
 @interface ViewController : UIViewController
 {
     SocketController *socketController;
-  
 }
 
 

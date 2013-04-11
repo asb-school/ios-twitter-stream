@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocketController.h"
 
 @interface displayTweetsViewController : UIViewController
 {
-    
+
 }
 
 @property (nonatomic) NSArray *tableData;
+@property (nonatomic) SocketController *socketController;
 
 @end

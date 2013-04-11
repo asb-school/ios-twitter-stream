@@ -110,8 +110,4 @@
         [searchTermsTable scrollToRowAtIndexPath: [NSIndexPath indexPathForRow:[tableData count]-1 inSection:0] atScrollPosition: UITableViewScrollPositionTop animated: YES];
     }
 }
-
-- (IBAction)displayTweetsView:(id)sender
-{
-}
 @end

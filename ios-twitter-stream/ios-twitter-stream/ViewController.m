@@ -21,6 +21,8 @@
     
     [socketController setupConnection];
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

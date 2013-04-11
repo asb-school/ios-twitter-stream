@@ -18,6 +18,5 @@
 }
 
 - (IBAction)addSearchTerm:(id)sender;
-- (IBAction)displayTweetsView:(id)sender;
 
 @end
